@@ -21,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\PostCreated' => [
             'App\Listeners\PostCreationNotification',
         ],
+        'App\Events\PostUpdated' => [
+            'App\Listeners\PostUpdationNotification',
+        ],
     ];
 
     /**
@@ -31,7 +34,6 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         parent::boot();
-
         //
     }
 }

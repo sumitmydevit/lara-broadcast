@@ -43423,6 +43423,12 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+Echo.channel('postchannel').listen('PostCreated', function (e) {
+  //console.log(e);
+  var item = '<li class="list-group-item">' + e.post.title + '</li>';
+  $('.list-group').append(item);
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -43469,12 +43475,7 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: "be77430f8f9f44219c8b",
   cluster: "ap2",
-  forceTLS: true
-});
-Window.Echo.channel('posts').listen('PostCreated', function (e) {
-  console.log('fdfdfd'); //console.log(e.order.name);
-
-  console.log(e);
+  forceTLS: false
 });
 
 /***/ }),

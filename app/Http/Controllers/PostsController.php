@@ -43,9 +43,10 @@ class PostsController extends Controller
         $post->description = $request->input('description');
         $post->user_id = Auth::user()->id;      
         $post->save();
+        
         event(new PostCreated($post));
         
-        return redirect('/posts')->with('success', 'Post Added Successfully!');
+        return redirect('/posts/create')->with('success', 'Post Added Successfully!');
     }
 
     /**

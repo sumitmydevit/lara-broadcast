@@ -18,7 +18,8 @@ Broadcast::channel('App.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });
 
-Broadcast::channel('post.*', function ($post, $id) {
+Broadcast::channel('postchannel', function ($post, $id) {
     //return (int) $post->id === (int) $id;
-    return $post->id === Posts::findOrNew($id)->id;
+    //return $post->id === Posts::findOrNew($id)->id;
+    return true;
 });

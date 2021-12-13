@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\PostCreated;
 use Illuminate\Support\Facades\Route;
 
 /*

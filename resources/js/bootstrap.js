@@ -37,12 +37,10 @@ window.Echo = new Echo({
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-    forceTLS: true
+    forceTLS: false
 });
 
-Window.Echo.channel('posts')
-    .listen('PostCreated', (e) => {
-        console.log('fdfdfd');
-        //console.log(e.order.name);
-        console.log(e);
-    });
+
+
+
+
