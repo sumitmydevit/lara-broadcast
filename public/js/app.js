@@ -43424,7 +43424,7 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 Echo.channel('postchannel').listen('PostCreated', function (e) {
-  //console.log(e);
+  console.log('dhfhdvf');
   var item = '<li class="list-group-item">' + e.post.title + '</li>';
   $('.list-group').append(item);
 });
